@@ -138,7 +138,7 @@ if __name__ == '__main__':
         if epoch > 1:
             if test_loss.item() < model_loss:    
                 model_loss = test_loss.item()
-                File_Path = 'F:/Project/RUL_GAN/DAST/model_pretrained_new' + '\\' + 'DAST' + '\\' + 'F004' + '\\' 
+                File_Path = '..' + '\\' + 'DAST' + '\\' + 'F004' + '\\' 
                 if not os.path.exists(File_Path):
                     os.makedirs(File_Path)
                 torch.save(model, File_Path + '/' + 'F004_DAST_prediciton_model')
