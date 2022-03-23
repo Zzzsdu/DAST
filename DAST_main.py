@@ -57,13 +57,13 @@ if __name__ == '__main__':
     
     
     #Hyperparameters
-    batch_size = 198
-    dim_val = 128
-    dim_attn = 128
-    dim_val_t = 128 
-    dim_attn_t = 128 
-    dim_val_s = 128
-    dim_attn_s = 128
+    batch_size = 256
+    dim_val = 64
+    dim_attn = 64
+    dim_val_t = 64 
+    dim_attn_t = 64 
+    dim_val_s = 64
+    dim_attn_s = 64
     n_heads = 4  
     n_decoder_layers = 1
     n_encoder_layers = 2
