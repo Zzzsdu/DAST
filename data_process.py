@@ -131,8 +131,8 @@ sio.savemat('F001_window_size_trainX.mat', {"train1X": trainX})
 sio.savemat('F001_window_size_trainY.mat', {"train1Y": trainY})
 sio.savemat('F001_window_size_testX.mat', {"test1X": testX})
 sio.savemat('F001_window_size_testY.mat', {"test1Y": testY})
-        
-        
+
+     
         
 # Statistical features process 
         
@@ -159,7 +159,11 @@ trainX_fea1 = []
 testX_fea1 = []
 trainX_fea2 = []
 testX_fea2 = []
-window_size = 40
+window_size = 40 
+Feasize = 14  # the number of choosed sensors
+
+trainX = np.reshape(trainX, [trainX.shape[0], window_size, Feasize, 1])
+testX = np.reshape(testX, [testX.shape[0], window_size, Feasize, 1])
 
 for i in range(len(trainX)): 
     data_temp = trainX[i]
@@ -182,7 +186,7 @@ testX_fea2 = scale2.transform(testX_fea2)
 
 trainX_new = []
 testX_new = []
-Feasize = 14  # the number of choosed sensors
+
 
 for i in range(len(trainX)):
     data_temp0 = trainX[i]
