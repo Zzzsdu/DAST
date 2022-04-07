@@ -182,7 +182,7 @@ testX_fea2 = scale2.transform(testX_fea2)
 
 trainX_new = []
 testX_new = []
-Feasize = window_size
+Feasize = 14  # the number of choosed sensors
 
 for i in range(len(trainX)):
     data_temp0 = trainX[i]
