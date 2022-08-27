@@ -36,7 +36,8 @@ def myScore(Target, Pred):
 if __name__ == '__main__':
     
     # Load preprocessed data
-    X_train = sio.loadmat('../trainX_new_40.mat')
+    X_train = sio.loadmat('../trainX_new_40.mat')  # load sliding window preprocessed and feature extracted (mean value and regression coefficient estimates feature) data
+
     X_train = X_train['trainX_new']
     X_train = X_train.reshape(len(X_train),42,14)
     Y_train = sio.loadmat('../trainY_40.mat')
