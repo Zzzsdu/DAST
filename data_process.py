@@ -29,10 +29,10 @@ test_01_nor = test_F001
 
 
 #Delete worthless sensors
-train_01_nor = np.delete(train_01_nor, [5, 9, 10, 14, 20, 22, 23], axis=1) 
-test_01_nor = np.delete(test_01_nor, [5, 9, 10, 14, 20, 22, 23], axis=1)  
-train_01_nor = np.delete(train_01_nor, [2,3,4,5, 9, 10, 14, 20, 22, 23], axis=1) 
-test_01_nor = np.delete(test_01_nor, [2,3,4,5, 9, 10, 14, 20, 22, 23], axis=1) 
+train_01_nor = np.delete(train_01_nor, [5, 9, 10, 14, 20, 22, 23], axis=1) # include operation condition
+test_01_nor = np.delete(test_01_nor, [5, 9, 10, 14, 20, 22, 23], axis=1)  # include operation condition
+train_01_nor = np.delete(train_01_nor, [2,3,4,5, 9, 10, 14, 20, 22, 23], axis=1)  # exclude operation condition
+test_01_nor = np.delete(test_01_nor, [2,3,4,5, 9, 10, 14, 20, 22, 23], axis=1)  # exclude operation condition
 
 #parameters of data process
 RUL_max = 125.0  
