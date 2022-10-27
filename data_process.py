@@ -133,7 +133,7 @@ sio.savemat('F001_window_size_testX.mat', {"test1X": testX})
 sio.savemat('F001_window_size_testY.mat', {"test1Y": testY})
 
      
-        
+ '''       
 # Statistical features process 
         
 regr = linear_model.LinearRegression()  # feature of linear coefficient
@@ -206,7 +206,7 @@ testX_new = np.array(testX_new)
         
 sio.savemat('F001_window_size_trainX_new.mat', {"train1X_new": trainX_new})
 sio.savemat('F001_window_size_testX_new.mat', {"test1X_new": testX_new})   
-        
+'''       
         
         
         
