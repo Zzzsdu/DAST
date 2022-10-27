@@ -29,8 +29,8 @@ def fea_extract2(data):  # feature 2
     return fea
 
 
-trainX = sio.loadmat('.../slide_window_processed/')
-testX =  sio.loadmat('.../slide_window_processed/')
+trainX = sio.loadmat('.../slide_window_processed/')  #upload sliding time window processed data
+testX =  sio.loadmat('.../slide_window_processed/')  #upload sliding time window processed data
 trainX_fea1 = []
 testX_fea1 = []
 trainX_fea2 = []
