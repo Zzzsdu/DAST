@@ -19,7 +19,8 @@ from torch.autograd import Variable
 from DAST_utils import *
 from DAST_Network import *
 from torch.utils.data import TensorDataset,DataLoader
-np.random.seed(7)
+np.random.seed(1)
+torch.manual_seed(1)
 
 #Myscore function
 def myScore(Target, Pred):
