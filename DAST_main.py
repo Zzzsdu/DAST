@@ -136,6 +136,15 @@ if __name__ == '__main__':
         print('test_loss = ', test_loss.item(),
               'test_score = ', test_score)
         
+        #Model save
+        if epoch > 1:
+            if test_loss.item() < model_loss:    
+                model_loss = test_loss.item()
+                File_Path = '' + '\\' + 'DAST' + '\\' + 'F001' + '\\' 
+                if not os.path.exists(File_Path):
+                    os.makedirs(File_Path)
+                torch.save(model, File_Path + '/' + 'F001_DAST_prediciton_model_new')
+        
         
     test_time_mean = np.mean(test_time)
     train_time_sum = np.sum(train_time)
