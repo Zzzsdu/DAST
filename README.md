@@ -18,19 +18,6 @@ The data processed by sliding time window will be input to Statistical features 
 
 You can load the processed data and pretrained model to get the final results or you can start the model training process and test process. 
 
-Citation
-===============
-If our code is helpful for your research, please cite our paper:
-
-@article{zhang2022dual,
-  title={Dual-Aspect Self-Attention Based on Transformer for Remaining Useful Life Prediction},
-  author={Zhang, Zhizheng and Song, Wen and Li, Qiqiang},
-  journal={IEEE Transactions on Instrumentation and Measurement},
-  volume={71},
-  pages={1--11},
-  year={2022},
-  publisher={IEEE}
-}
 
 
 
