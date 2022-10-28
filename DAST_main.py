@@ -19,7 +19,7 @@ from torch.autograd import Variable
 from DAST_utils import *
 from DAST_Network import *
 from torch.utils.data import TensorDataset,DataLoader
-
+np.random.seed(7)
 
 #Myscore function
 def myScore(Target, Pred):
@@ -70,7 +70,7 @@ if __name__ == '__main__':
     n_encoder_layers = 2
     max_rul = 125
     lr = 0.001 
-    epochs = 150
+    epochs = 100
     time_step = 62  
     dec_seq_len = 4
     output_sequence_length = 1  
@@ -134,17 +134,8 @@ if __name__ == '__main__':
         test_score = myScore(Y_test_numpy*125, out_batch_pre*125)
         print('test_loss = ', test_loss.item(),
               'test_score = ', test_score)
-
-        #Model save
-        if epoch > 1:
-            if test_loss.item() < model_loss:    
-                model_loss = test_loss.item()
-                File_Path = '..' + '\\' + 'DAST' + '\\' + 'F004' + '\\' 
-                if not os.path.exists(File_Path):
-                    os.makedirs(File_Path)
-                torch.save(model, File_Path + '/' + 'F004_DAST_prediciton_model')
         
-
+        
     test_time_mean = np.mean(test_time)
     train_time_sum = np.sum(train_time)
     train_time_mean = np.mean(train_time)
