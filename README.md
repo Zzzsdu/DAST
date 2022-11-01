@@ -1,9 +1,5 @@
 # DAST
 
-Requirements
-===============
-Python 3.5 or above
----------------------
 
 How to run
 ===============
@@ -16,7 +12,7 @@ The data processed by sliding time window will be input to Statistical features 
 
 (2) The data preprocessed will be the input to DAST model.
 
-You can load the processed data and pretrained model to get the final results or you can start the model training process and test process. 
+You can load the processed data and pretrained model to get the final results.
 
 
 
