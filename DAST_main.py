@@ -145,7 +145,7 @@ for k in range(10):
                     File_Path = '' + '\\' + 'DAST' + '\\' + 'F001' + '\\' 
                     if not os.path.exists(File_Path):
                         os.makedirs(File_Path)
-                    torch.save(model, File_Path + '/' + 'F001_DAST_prediciton_model_new')
+                    torch.save(model, File_Path + '/' + 'F001_DAST_prediciton_model_new_' + str(k))
 
 
         test_time_mean = np.mean(test_time)
