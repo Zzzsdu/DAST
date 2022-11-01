@@ -36,18 +36,18 @@ def myScore(Target, Pred):
 if __name__ == '__main__':
     
     # Load preprocessed data
-    X_train = sio.loadmat('../trainX_new_40.mat')  # load sliding window preprocessed and Statistical features processed data (mean value and regression coefficient estimates feature) 
+    X_train = sio.loadmat('../')  # load sliding window preprocessed and Statistical features processed data (mean value and regression coefficient estimates feature) 
 
     X_train = X_train['trainX_new']
     X_train = X_train.reshape(len(X_train),42,14)
-    Y_train = sio.loadmat('../trainY_40.mat')
+    Y_train = sio.loadmat('../')
     Y_train = Y_train['trainY']
     Y_train = Y_train.transpose()
     
-    X_test = sio.loadmat('../testX_new_40.mat')
+    X_test = sio.loadmat('../')
     X_test = X_test['testX_new']
     X_test = X_test.reshape(len(X_test),42,14)
-    Y_test = sio.loadmat('../testY_40.mat')
+    Y_test = sio.loadmat('../')
     Y_test = Y_test['testY']
     Y_test = Y_test.transpose()
     
@@ -59,18 +59,18 @@ if __name__ == '__main__':
     
     #Hyperparameters
     batch_size = 256
-    dim_val = 64
-    dim_attn = 64
-    dim_val_t = 64 
-    dim_attn_t = 64 
-    dim_val_s = 64
-    dim_attn_s = 64
+    dim_val = 32
+    dim_attn = 32
+    dim_val_t = 32 
+    dim_attn_t = 32 
+    dim_val_s = 32
+    dim_attn_s = 32
     n_heads = 4  
     n_decoder_layers = 1
     n_encoder_layers = 2
     max_rul = 125
     lr = 0.001 
-    epochs = 100
+    epochs = 150
     time_step = 42  
     dec_seq_len = 4
     output_sequence_length = 1  
@@ -153,7 +153,7 @@ if __name__ == '__main__':
 
 
 
-'''
+
 # load test
 model = torch.load('../F001_DAST_prediciton_model_11.46')
 Y_test_numpy = Y_test.detach().numpy()
@@ -176,7 +176,7 @@ print('test_loss = ', test_loss.item(),
           'test_score = ', test_score)
 
 
-'''
+
 
 
 
